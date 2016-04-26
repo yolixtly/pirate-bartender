@@ -1,0 +1,13 @@
+{
+  "name": "bartender-oop",
+  "version": "1.0.0",
+  "description": "OOP practice",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.3"
+  }
+}
