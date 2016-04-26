@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Pirate Bartender</title>
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+		<header>
+			<h1>Pirate Bartender</h1>
+			
+			<h2>Serving Drinks to y'all!</h2>
+		</header>
+		<hr>
+		<section id="questions">
+			<form>
+				<div class="questionGroup">
+					<label for="drinkStrong">Do ye like yer drinks strong?</label>
+					<section id="drinkStrong">
+						<option value="yes">Aye</option>
+						<option value="no">Nay</option>
+					</section>
+				</div>
+				<div class="questionGroup">
+					<label for="drinkSalty">Do ye like it with a salty tang?</label>
+					<section id="drinkSalty">
+						<option value="yes">Aye</option>
+						<option value="no">Nay</option>
+					</section>
+				</div>
+				<div class="questionGroup">
+					<label for="drinkBitter">Are ye a lubber who likes it bitter?</label>
+					<section id="drinkBitter">
+						<option value="yes">Aye</option>
+						<option value="no">Nay</option>
+					</section>
+				</div>
+				<div class="questionGroup">
+					<label for="drinkSweet">Would ye like a bit of sweetness with yer poison?</label>
+					<section id="drinkSweet">
+						<option value="yes">Aye</option>
+						<option value="no">Nay</option>
+					</section>
+				</div>
+				<div class="questionGroup">
+					<label for="drinkFruity">Are ye one for a fruity finish?</label>
+					<section id="drinkFruity">
+						<option value="yes">Aye</option>
+						<option value="no">Nay</option>
+					</section>
+				</div>
+				<br/>
+				<div class="questionGroup submitButton">
+					<button class="orderButton">Place yer Order!</button>
+				</div>
+			</form>
+			
+		</section>
+		<script src="node_modules/jquery/dist/jquery.min.js"></script>
+		<script src="apps/app.js"></script>
+	</body>
+</html>
