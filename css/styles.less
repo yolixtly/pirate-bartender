@@ -1,26 +1,72 @@
+@Great-Vibes-Font:'Great Vibes', cursive;
+@Merriweather-Font: 'Merriweather', serif;
+html {
+	min-height: 100%;
+	box-sizing: border-box;
+}
 body {
 	margin: 0 auto;
 	text-align: center;
+	background: url(../images/background.jpg) center center no-repeat;
+	background-size: cover;
 }
-header {
+
+.title {
+	margin-top: 10%;
+	text-align: center;
+	font-family: @Great-Vibes-Font;
+	text-shadow: 7px 7px 7px black;
+	color: white;
 	h1 {
-		font-size: 8rem;
+		font-size: 15rem;
+	}
+	h2 {
+		font-size: 5rem;
 	}
 }
-
 hr {
-	border-bottom: 2rem solid rgba(128, 128, 128, 0.3);
+	border-top: 0.5rem solid #eee;
+	width: 70%;
+}
+.button {
+	color: white;
+    background: rgba(0, 0, 0, 0.57);
+    margin: 2rem;
+
+	&:hover {
+	color: #000000;
+    text-decoration: none;
+    background-color: #DAB76B;
+    font-family: @Merriweather-Font;
+	}
+}
+.name {
+    padding: 1em;
+    width: 270px;
+    margin: 0 auto;
+    display: block;
+    font-family: @Merriweather-Font;
+    text-align: center;
+    color: #4B3B29;
 }
 
-.questionGroup {
-	font-size: 4rem;
-	margin: 3rem;
-	option {
-		&:hover {
-			background-color: dimgray;
+@media (max-width: 600px) {
+	.title {
+		margin-top: 50%;
+		text-shadow: 1px 1px 0px black;
+		h1 {	
+			font-size: 4rem;
 		}
-		&:active {
-			color: #195F81;
+		h2 {
+			font-size: 3rem;
+			margin: 1.5rem;
+			
 		}
 	}
+	hr {
+		border-top: 4px solid #eee;
+	    width: 85%;
+	    margin: 0 auto;
+	}
+
 }

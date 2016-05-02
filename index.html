@@ -5,62 +5,32 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Pirate Bartender</title>
+		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/styles.css">
+		<link href='https://fonts.googleapis.com/css?family=Great+Vibes|Merriweather:400,300italic' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
-		<header>
-			<h1>Pirate Bartender</h1>
-			
-			<h2>Serving Drinks to y'all!</h2>
-		</header>
-		<hr>
-		<section id="questions">
-			<form>
-				<div class="questionGroup">
-					<label for="drinkStrong">Do ye like yer drinks strong?</label>
-					<select id="drinkStrong">
-						<option value="yes">Aye</option>
-						<option value="no">Nay</option>
-					</select>
-				</div>
-				<div class="questionGroup">
-					<label for="drinkSalty">Do ye like it with a salty tang?</label>
-					<select id="drinkSalty">
-						<option value="yes">Aye</option>
-						<option value="no">Nay</option>
-					</select>
-				</div>
-				<div class="questionGroup">
-					<label for="drinkBitter">Are ye a lubber who likes it bitter?</label>
-					<select id="drinkBitter">
-						<option value="yes">Aye</option>
-						<option value="no">Nay</option>
-					</select>
-				</div>
-				<div class="questionGroup">
-					<label for="drinkSweet">Would ye like a bit of sweetness with yer poison?</label>
-					<select id="drinkSweet">
-						<option value="yes">Aye</option>
-						<option value="no">Nay</option>
-					</select>
-				</div>
-				<div class="questionGroup">
-					<label for="drinkFruity">Are ye one for a fruity finish?</label>
-					<select id="drinkFruity">
-						<option value="yes">Aye</option>
-						<option value="no">Nay</option>
-					</select>
-				</div>
-				<br/>
-				<div class="questionGroup submitButton">
-					<button class="orderButton">Place yer Order!</button>
-				</div>
-			</form>		
-		</section>
-		<section class="resultDrink">
-			
-		</section>
+  <section id="init-page">
+		<div class="title">
+			<h1>The Black Pearl</h1>
+			<hr>
+			<h2>Drinks and Burgers</h2>
+		</div>
+		<div class="order-button">
+			<button class="drinkOrder button btn">I'm Thirsty!</button>
+			<button class="burgerOrder button btn">I'm Hungry</button>
+		</div>
+    </section>
+    <section id="client-info">
+    <form class="ask-name hidden">
+      <input class="name" type="text" placeholder="ye'r name"></input>
+      <input class="submit-name button btn" type="submit" value="submit"></input>
+    </form>    
+    <form class="ask-preferences hidden">
+      
+    </form>  
+    </section>
 		<script src="node_modules/jquery/dist/jquery.min.js"></script>
 		<script src="apps/app.js"></script>
 	</body>
