@@ -11,27 +11,32 @@
 		<link href='https://fonts.googleapis.com/css?family=Great+Vibes|Merriweather:400,300italic' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
-  <section id="init-page">
-		<div class="title">
-			<h1>The Black Pearl</h1>
-			<hr>
-			<h2>Drinks and Burgers</h2>
-		</div>
-		<div class="order-button">
-			<button class="drinkOrder button btn">I'm Thirsty!</button>
-			<button class="burgerOrder button btn">I'm Hungry</button>
-		</div>
-    </section>
-    <section id="client-info">
-    <h3 id='drinkDisplay'></h3>
-    <form class="ask-name hidden">
-      <input class="name" type="text" placeholder="ye'r name"></input>
-      <input class="submit-name button btn" type="submit" value="submit"></input>
-    </form>    
-    <form class="ask-preferences hidden">
-      <!--Here the questions -->
-    </form>  
-    </section>
+		<section id="init-page">
+			<div class="title">
+				<h1>The Black Pearl</h1>
+				<hr>
+				<h2>Drinks and Burgers</h2>
+			</div>
+			
+			<div class="order-button">
+				<button class="drinkOrder button btn">I'm Thirsty!</button>
+				<button class="burgerOrder button btn">I'm Hungry</button>
+			</div>
+		</section>
+		<section id="client-info">
+
+			<h3 id='message'></h3>
+
+			<form class="ask-name">
+				<input class="name" type="text" placeholder="ye'r name"></input>
+				<input class="submit-name button btn" type="submit" value="submit"></input>
+			</form>
+
+			<form class="ask-preferences">
+				<!--Here the questions -->
+			</form>
+
+		</section>
 		<script src="node_modules/jquery/dist/jquery.min.js"></script>
 		<script src="apps/app.js"></script>
 	</body>
