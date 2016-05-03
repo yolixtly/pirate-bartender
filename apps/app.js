@@ -33,7 +33,11 @@ $(document).ready(function() {
 
 			for(var i = 0; i < userChoices.length; i++) {
 				currentIngredients.push(this.ingredients[userChoices[i]]); //creates a single array with all the elements in the selected categories
+				console.log(currentIngredients); 
 			};
+			currentIngredients = currentIngredients.join(',').split(',');
+
+			console.log(currentIngredients);
 			for(var i = 0; i < 3; i++) {
 				var randomIndex = Math.round(Math.random() * userChoices.length); //picks 3 random numbers to be passed as indexes 
 				finalIngredients.push(currentIngredients[randomIndex]); //this picks the 3 elements to create the Drink Ingredients :) 
@@ -107,8 +111,9 @@ $(document).ready(function() {
 				return drinkName;
 	};
 	Bartender.prototype.createDrink = function(pantry){
+			// var userChoices = ["strong", "sweet", "bitter"]; // TODO
 			var drink = {
-				ingredients : pantry,
+				ingredients : pantry.getIngredients(this.preferences),
 				name: this.nameDrink()
 			};
 			//Bartender properties: customer and customerDrink
@@ -211,7 +216,7 @@ $(document).ready(function() {
 		$('.ask-preferences').hide();
 		if(worker === "bar"){
 			bar.addPreferences(savePreferences);
-			bar.createDrink(pantry);
+			bar.createDrink(itemInStock);
 		};
 	});
 });
