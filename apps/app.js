@@ -85,8 +85,8 @@ $(document).ready(function() {
 		},
 		//Returns the name of the drink with its ingredients
 		printOrder : function(drinkName) {
-			$('#message').html('The' + drinkName.name +
-			'contains these ingredients: <br/>' + drinkName.ingredients + '.');
+			$('#message').html('The ' + drinkName.name +
+			' contains these ingredients: <br/>' + drinkName.ingredients + '.');
 		}
 	};
 	/*-------------------------------------------------------------------
@@ -152,6 +152,7 @@ $(document).ready(function() {
 	var newIngredient = new Ingredient('sweet',['Sugar cube', 'spoonful of honey', 'splash of cola']);
 	itemInStock.addIngredient(newIngredient);
 	var newIngredient = new Ingredient('fruity',['Slice of orange', 'dash of cassis', 'cherry on top']);
+	itemInStock.addIngredient(newIngredient);
 
 	/*-------------------------------------------------------------------
 	--------------------EVENT HANDLERS----------------------------------*/
@@ -191,7 +192,7 @@ $(document).ready(function() {
 		if (worker === "bar") {
 			item = bar.findCustomer(name);
 			if(item){
-			var oneMoreDrink = $('#message').html("here is one more: " + item.name + name);
+			var oneMoreDrink = $('#message').html("here is one more: " + item.name + " " + name);
 			return oneMoreDrink;
 			}
 		}

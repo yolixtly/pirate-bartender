@@ -36,6 +36,9 @@ hr {
   background-color: #DAB76B;
   font-family: 'Merriweather', serif;
 }
+.button:focus {
+  color: #F64708;
+}
 .name {
   padding: 1em;
   width: 270px;
