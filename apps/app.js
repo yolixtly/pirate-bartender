@@ -93,22 +93,20 @@ var Bartender = function(name) {
 	Worker.call(this, name);
 };
 Bartender.prototype = Object.create(Worker.prototype); //Now Bartender inherits the properties from Worker
-
+Bartender.prototype.constructor = Bartender; 
 
 // Methods of Bartender 
-Bartender.prototype = {
-	constructor : Bartender,
-	nameDrink : function(){
+Bartender.prototype.nameDrink = function(){
 		var drinkName = "";
-		var words = {
+		var words = {	
 			nouns : ["Dog", "Mermaid", "Dolphin", "Piranha"],
 			adjectives : ["Sassy", "Crazy", "Breezy", "Sunburned"]
 		};
 		drinkName += words.adjectives[Math.Round(Math.random() * words.adjectives.length)];
 		drinkName += " " + word.nouns[Math.Round(Math.random() * words.nouns.length)];
 			return drinkName;
-	},
-	createDrink : function(pantry){
+};
+Bartender.prototype.createDrink = function(pantry){
 		var drink = {
 			ingredients : pantry,
 			name: this.nameDrink()
@@ -117,7 +115,6 @@ Bartender.prototype = {
 		this.customers[name] = drink;
 		drink.ingredients = drink.ingredients.join(', ');
 		this.printOrder(drink);
-	}
 };
 /*-------------------------------------------------------------------
 -------------Instances of: QUESTION/ INGREDIENT /PANTRY /BARTENDER(WORKER)------------*/
@@ -125,19 +122,19 @@ Bartender.prototype = {
 //Instance of Pantry
 var itemInStock = new Pantry("pantry");
 var bar = new Bartender("bar");
-var yoli = new Worker("yoli");
+
 
 //Instances of Question
 var questionToAsk = new Question('Do ye like yer drinks strong?', 'strong');
-yoli.addQuestion(questionToAsk);
+bar.addQuestion(questionToAsk);
 var questionToAsk = new Question('Do ye like it with a salty tang?','salty');
 bar.addQuestion(questionToAsk); 
 var questionToAsk = new Question('Are ye a lubber who likes it bitter?','bitter');
-// bar.addQuestion(questionToAsk); 
+bar.addQuestion(questionToAsk); 
 var questionToAsk = new Question('Would ye like a bit of sweetness with yer poison?','sweet');
-// bar.addQuestion(questionToAsk); 
+bar.addQuestion(questionToAsk); 
 var questionToAsk = new Question('Are ye one for a fruity finish?','fruity');
-// bar.addQuestion(questionToAsk); 
+bar.addQuestion(questionToAsk); 
 
 //Instances of Ingredient then grabed to be placed in the PANTRY
 var newIngredient = new Ingredient('strong',['Glug of rum', 'slug of whisky', 'splash of gin']);
